@@ -1,12 +1,12 @@
 # Money transfer exercise
 
 A RESTful API to transfer money between accounts.  
-The accounts are all stored in an in-memory database .
+The accounts are all stored in an in-memory.
 
 The API is written in Java 8 and uses jetty embedded REST server.
 
 ## Libraries used
- - **Jetty along with jersey container** used create an embedded REST server.
+ - **Jetty along with jersey container** is used create an embedded REST server.
  - **Jackson** for JSON serialization and deserialization.
  - **JUnit 4** - Unit testing
  - **RestAssured**  libraries used for REST API testing
@@ -92,11 +92,11 @@ curl -XPOST http://localhost:8085/transact/transfer -d '"from=10000003&to=100000
 The response will be the from Account details
 
 ### Future possible improvements
-- use JSON as content type for requests.
+- use JSON for post request
 - Maintain transactions for an account
 - API to list all transaction for an account
 - API to list all accounts
-- Use H2 for in-memory DB
+- Use H2 for in-memory DB instead
 - Implement logging
-- Support for different currencies
-- Transactions should have a timestamp
+
+
