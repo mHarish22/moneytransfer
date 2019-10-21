@@ -32,7 +32,7 @@ I am using form parameters for POST calls, this could be replaced by JSON using 
 #### Creating an account  
 To create an account it's a simple GET request:
 ```
-`curl -d "fname=mayuri&sname=harish&addr=ilford" POST http://localhost:8080/account/create
+`curl -d "fname=mayuri&sname=harish&addr=ilford" POST http://localhost:8085/account/create
 
 ``` 
 The server will respond with information about the created account in a JSON format:
@@ -47,13 +47,13 @@ The server will respond with information about the created account in a JSON for
 ```
 
 #### Get an account
-To get information on an account you can submit a GET request with the account Id in as a parameter in the URL: `curl -XGET http://localhost:8080/account/detail?accNo=10000003`.
+To get information on an account you can submit a GET request with the account Id in as a parameter in the URL: `curl -XGET http://localhost:8085/account/detail?accNo=10000003`.
 The server will respond with information about the account, which in this case will be same as above.
 
 #### Deposit money
 You can deposit money into an account by making a POST request providing the account Id and the amount you wish to deposit:
 ```
-curl -XPOST http://localhost:8080/account/deposit -d "accno=10000003&amnt=180"
+curl -XPOST http://localhost:8085/account/deposit -d "accno=10000003&amnt=180"
 }'
 ```
 The response will be the account details:
@@ -70,7 +70,7 @@ The response will be the account details:
 #### Withdraw money
 Similarly, you can withdraw money from an account by making a POST request providing the account Id and the amount you wish to withdraw:
 ```
-curl -XPOST http://localhost:8080/account/withdraw -d "accno=10000003&amnt=80"
+curl -XPOST http://localhost:8085/account/withdraw -d "accno=10000003&amnt=80"
 ```
 The response will be the account details:
 ```
@@ -86,7 +86,7 @@ The response will be the account details:
 #### Transfer money
 To transfer money make a POST request providing the source account Id, destination account Id and the amount to transfer:
 ```
-curl -XPOST http://localhost:8080/transfer -d '"from=10000003&to=10000001&amnt=80"
+curl -XPOST http://localhost:8085/transfer -d '"from=10000003&to=10000001&amnt=80"
 
 ```
 The response will be the from Account details
