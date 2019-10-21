@@ -86,7 +86,7 @@ The response will be the account details:
 #### Transfer money
 To transfer money make a POST request providing the source account Id, destination account Id and the amount to transfer:
 ```
-curl -XPOST http://localhost:8085/transfer -d '"from=10000003&to=10000001&amnt=80"
+curl -XPOST http://localhost:8085/transact/transfer -d '"from=10000003&to=10000001&amnt=80"
 
 ```
 The response will be the from Account details
