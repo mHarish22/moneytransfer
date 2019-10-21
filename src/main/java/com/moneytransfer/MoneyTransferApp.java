@@ -15,7 +15,10 @@ public class MoneyTransferApp {
     public static void main(String[] args) {
         Server jettyServer = new Server();
         try {
-           jettyServer =  startServer();
+            int portNumber= 8085;
+            if(args.length > 0) portNumber = Integer.parseInt(args[0]);
+
+           jettyServer =  startServer(portNumber);
             jettyServer.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -26,11 +29,11 @@ public class MoneyTransferApp {
         }
     }
 
-    public static Server startServer() throws Exception {
+    public static Server startServer(int portNum) throws Exception {
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
         context.setContextPath("/");
 
-        Server jettyServer = new Server(8085);
+        Server jettyServer = new Server(portNum);
         jettyServer.setHandler(context);
 
         ServletHolder jerseyServlet = context.addServlet(

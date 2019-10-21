@@ -18,7 +18,7 @@ public class TestMoneyTransferAPI {
     @BeforeClass
     public static void init() {
         try {
-            jettyServer = MoneyTransferApp.startServer();
+            jettyServer = MoneyTransferApp.startServer(8085);
         } catch (Exception e) {
             e.printStackTrace();
         }
