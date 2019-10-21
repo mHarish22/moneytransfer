@@ -24,7 +24,7 @@ The API is written in Java 8 and uses jetty embedded REST server.
 
 ## Starting the application
 1. Clone the repo and run the following command: `mvn clean package`
-2. This will create a single fat jar which can be executed with `java -jar moneytransfer-1.0-SNAPSHOT-jar-with-dependencies.jar `
+2. This will create a single fat jar which can be executed with `java -jar moneytransfer-1.0-SNAPSHOT-jar-with-dependencies.jar ` which will start the server at port 8085, or you can specify the port as a parameter `java -jar moneytransfer-1.0-SNAPSHOT-jar-with-dependencies.jar 8080`
 
 ## Using the REST API
 I am using form parameters for POST calls, this could be replaced by JSON using model objects for better design.
